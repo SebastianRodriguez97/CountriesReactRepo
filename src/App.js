@@ -1,25 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import Countries from "./Pages/Countries/Countries";
+import Start from "./Pages/Start/Start";
+import Header from "./Components/Header";
+import ProtectedRoute from "./Components/Security/ProtectedRoute";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route index path="/" element={ <Start /> } />
+        <Route path="/countries" element={
+          <ProtectedRoute>
+            <Header />
+            <Countries />
+          </ProtectedRoute>
+        } />
+      </Routes>
     </div>
   );
 }
-
-export default App;

@@ -1,0 +1,12 @@
+.data-list {
+    .ui.cards {
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 5%;
+    }
+
+    .ui.cards>.card {
+        margin: 1em 1em;
+    }
+}

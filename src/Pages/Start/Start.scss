@@ -1,0 +1,32 @@
+.start {
+    background-image: url("../../Assets/Images/login.jpeg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
+    .container {
+
+        .ui.card {
+            background: rgba(255, 255, 255, 0.8);
+            width: 50%;
+            position: absolute;
+            top: 50%; //calc(50% + 33px);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            // scroll-behavior: auto;
+        }
+
+        // @media (max-height: 430px) {
+        //     .ui.card {
+        //         transform: translate(-50%, -35%);
+        //     }
+        // }
+
+        // @media (max-height: 340px) {
+        //     .ui.card {
+        //         transform: translate(-50%, 0%);
+        //     }
+        // }
+    }
+}
